@@ -17,3 +17,19 @@ main {
   background-color:ghostwhite;
   padding: 50px 20px;
 }
+
+#formulario form .campos {
+  min-height: 100px;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  #formulario form .campos input, #formulario form .campos select{
+  max-width: 130px;
+}
+}
+
+footer {
+  background-color:snow;
+  padding: 20px;
+}

@@ -23,13 +23,13 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-start ms-md-5 flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="#hero">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="galeria.html">Colaboradores</a>
+                <a class="nav-link" href="#galeria">Colaboradores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Registro</a>
+                <a class="nav-link" href="#formulario">Registro</a>
               </li>
             </ul>
           </div>
@@ -42,22 +42,22 @@
     <!-- Introducción -->
     <section class="container-fluid" id="hero">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-6 px-5">
+        <div class="col-12 col-md-6 px-5 order-2 order-md-1">
           <h1 class="display-4">Registro de Colaboradores de Construcción</h1>
           Este sitio web está diseñado para registrar nuevos colaboradores de la construcción. Aquí podrás ingresar los datos necesarios para añadir un nuevo miembro al equipo de trabajo. El formulario incluye campos para el nombre, apellido, fecha de nacimiento, correo electrónico, cargo y fecha de ingreso. Una vez completado el formulario, podrás enviar la información para su registro.
         </div>
-        <div class="col-12 col-md-6"><img src="img/construction-sign.jpg" alt="" class="img-fluid"></div>
+        <div class="col-12 col-md-6 my-4 my-md-0 order-1 order-md-2"><img src="img/construction-sign.jpg" alt="" class="img-fluid"></div>
       </div>
     </section>
 
     <!-- Galería de colaboradores -->
     <section class="container-fluid" id="galeria">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-4 px-5">
+        <div class="col-12 col-md-4 p-5">
           <h2 class="display-4">Galería de Colaboradores</h2>
           <p>En esta sección podrás ver una galería de los colaboradores registrados. Cada colaborador tiene su propia tarjeta con información básica y una imagen representativa.</p>
         </div>
-        <div class="col-12 col-md-8 px-5">
+        <div class="col-12 col-md-8 px-5 table-responsive">
           <table class="table table-striped">
             <thead>
               <tr>
@@ -90,62 +90,62 @@
             </tbody>
           </table>
         </div>
-        
-      
+      </div>
+    </section>
 
     <!-- Formulario de registro -->
     <section class="container-fluid" id="formulario">
-      <div class="container">
-        <div class="row">
+      <div class="row">
+        <div class="col-12 px-md-3">
           <h2>Formulario de registro de nuevo colaborador de la construcción</h2>
         </div>
         <form action="">
           <div class="row">
-            <div class="col-2">
-              <div id="nombre">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="campos" id="nombre">
                 <label for="name">Nombre:</label>
                 <div>
                   <input type="text" id="name" name="name" required>
                 </div>
               </div>
-              <div id="nacimiento">
+              <div class="campos" id="nacimiento">
                 <label for="birthdate">Fecha de nacimiento:</label>
                 <div>
                   <input type="date" id="birthdate" name="birthdate" required>
                 </div>
               </div>
 
-              <div id="cargo">
+              <div class="campos" id="cargo">
               <label for="role">Cargo:</label>
                 <div>
                   <select id="role" name="role">
                     <option value="" disabled selected>Selecciona una opción </option>
-                    <option value="foreman">Capataz</option>
-                    <option value="worker">Obrero</option>
-                    <option value="engineer">Ingeniero</option>
-                    <option value="architect">Arquitecto</option>
-                    <option value="manager">Gerente</option>
-                    <option value="other">Otro</option>
+                    <option value="Capataz">Capataz</option>
+                    <option value="Obrero">Obrero</option>
+                    <option value="Ingeniero">Ingeniero</option>
+                    <option value="Arquitecto">Arquitecto</option>
+                    <option value="Gerente">Gerente</option>
+                    <option value="Otro">Otro</option>
                   </select>
                 </div>
               </div>
             </div>
             
-            <div class="col-2">
-              <div id="apellido">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="campos" id="apellido">
                 <label for="lasname">Apellido:</label>
                 <div>
                   <input type="text" id="lastname" name="lastname" required>
                 </div>
               </div>
-              <div id="correo">
+              <div class="campos" id="correo">
                 <label for="email">Correo electrónico:</label>
                 <div>
                   <input type="email" id="email" name="email" required>
                 </div>
               </div>
 
-              <div id="ingreso">
+              <div class="campos" id="ingreso">
                 <label for="startdate">Fecha de ingreso:</label>
                 <div>
                   <input type="date" id="startdate" name="startdate" required>
@@ -153,7 +153,7 @@
               </div>
             </div>
             <div class="col-12">
-              <div class="my-3"><button type="submit">Registrar</button></div>
+              <div class="my-3"><button type="submit" class="btn btn-secondary">Registrar</button></div>
             </div>
           </div>
           </form>
@@ -161,143 +161,12 @@
       
     </section>
   </main>
-  <footer></footer>
+  <footer class="text-center">
+    <p>Hecha con ❤️ por Ain y Ricardo @2025</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  <script>
-    const form = document.querySelector('form');
-    const tableBody = document.querySelector('tbody');
+ <script src="scripts.js"></script>
 
-    // Utilidad para mostrar el modal de confirmación
-    function showModal(message, onConfirm) {
-      // Crear modal básico
-      let modal = document.createElement('div');
-      modal.className = 'modal fade';
-      modal.tabIndex = -1;
-      modal.innerHTML = `
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Confirmación</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body">
-              <p>${message}</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" id="confirmBtn">Confirmar</button>
-            </div>
-          </div>
-        </div>
-      `;
-      document.body.appendChild(modal);
-      let bsModal = new bootstrap.Modal(modal);
-      bsModal.show();
-
-      modal.querySelector('#confirmBtn').onclick = () => {
-        bsModal.hide();
-        setTimeout(() => modal.remove(), 500);
-        onConfirm();
-      };
-      modal.addEventListener('hidden.bs.modal', () => modal.remove());
-    }
-
-    // Obtener usuarios actuales de la tabla
-    function getUsers() {
-      const rows = tableBody.querySelectorAll('tr');
-      let users = [];
-      rows.forEach(row => {
-        const cells = row.querySelectorAll('td');
-        if (cells.length >= 6) {
-          users.push({
-            name: cells[0].textContent,
-            lastname: cells[1].textContent,
-            birthdate: cells[2].textContent,
-            email: cells[3].textContent,
-            role: cells[4].textContent,
-            startdate: cells[5].textContent
-          });
-        }
-      });
-      return users;
-    }
-
-    // Validaciones
-    function validateForm(data, users) {
-      // Todos los campos requeridos
-      for (let key in data) {
-        if (!data[key]) return 'Todos los campos son obligatorios.';
-      }
-      // Correo único
-      if (users.some(u => u.email === data.email)) {
-        return 'El correo ya está registrado.';
-      }
-      // Fecha de ingreso >= nacimiento + 18 años
-      let birth = new Date(data.birthdate);
-      let minStart = new Date(birth.getFullYear() + 18, birth.getMonth(), birth.getDate());
-      let start = new Date(data.startdate);
-      if (start < minStart) {
-        return 'La fecha de ingreso debe ser al menos 18 años después de la fecha de nacimiento.';
-      }
-      return null;
-    }
-
-    // Agregar fila a la tabla
-    function addUserToTable(data) {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${data.name}</td>
-        <td>${data.lastname}</td>
-        <td>${data.birthdate}</td>
-        <td>${data.email}</td>
-        <td>${data.role}</td>
-        <td>${data.startdate}</td>
-        <td><button class="btn btn-danger btn-sm btn-delete">Eliminar</button></td>
-      `;
-      tableBody.appendChild(tr);
-    }
-
-    // Manejar eliminación
-    tableBody.addEventListener('click', function(e) {
-      if (e.target.classList.contains('btn-delete')) {
-        showModal('¿Seguro que deseas eliminar este usuario?', () => {
-          e.target.closest('tr').remove();
-        });
-      }
-    });
-
-    // Manejar envío del formulario
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const data = {
-        name: form.name.value.trim(),
-        lastname: form.lastname.value.trim(),
-        birthdate: form.birthdate.value,
-        email: form.email.value.trim(),
-        role: form.role.value,
-        startdate: form.startdate.value
-      };
-      const users = getUsers();
-      const error = validateForm(data, users);
-      if (error) {
-        showModal(error, () => {});
-        return;
-      }
-      showModal('¿Deseas registrar este usuario?', () => {
-        addUserToTable(data);
-        form.reset();
-      });
-    });
-
-    // Añadir columna de eliminar a las filas existentes
-    [...tableBody.rows].forEach(row => {
-      if (row.cells.length < 7) {
-        let td = document.createElement('td');
-        td.innerHTML = `<button class="btn btn-danger btn-sm btn-delete">Eliminar</button>`;
-        row.appendChild(td);
-      }
-    });
-  </script>
 </body>
 </html>
